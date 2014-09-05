@@ -7,9 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@class BidReDesign;
+@class Reachability;
+@interface AppDelegate : NSObject <UIApplicationDelegate>
+{
+    BidReDesign *mainPage;
+    IBOutlet UITabBarController *tabBar;
+    Reachability *hostReach;
+    
+}
+@property (strong, nonatomic) IBOutlet UIWindow *window;
+@property (strong, nonatomic) BidReDesign *mainPage;
+@property (strong, nonatomic) IBOutlet UITabBarController *tabBar;
+@property (nonatomic, retain) Reachability *hostReach;
 @end
